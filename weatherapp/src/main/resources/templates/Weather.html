@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title> Weather Application </title>	
+	</head>
+	<body>
+		<h2>Weather App </h2>
+		<form action="weather" method="get">
+			<input type="text" name="city" required placeholder="Enter city">
+			<button type="submit"> Get Weather </button>	
+		</form>	
+		<h2>Weather details </h2>
+		<div th:if="${weather}">
+			<h3>City <span th:text="${weather.name}"></span></h3>
+			<p>Temp<span th:text="${weather.main.temp}"></span></p>
+			<p>Huminity<span th:text="${weather.main.humidity}"></span></p>
+			
+		</div>
+	</body>
+</html>
