@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		
+		
+	</head>	
+	
+	<body>
+		<h2> Registration Successfully </h2>
+		<p>Name : <span th:text="${name}"> </span></p>
+		<p>Email : <span th:text="${email}"> </span></p>
+		<p>Gender : <span th:text="${gender}"> </span></p>
+		<p>Country : <span th:text="${country}"> </span></p>
+		<p>Hobbies : <span th:each="hobby:${hobbies}" th:text="${hobby}"></span></p>
+		<p>Date of Birth: <span th:text="${dob}"> </span></p>
+	</body>	
+</html>
